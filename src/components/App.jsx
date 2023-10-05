@@ -22,7 +22,7 @@ export class App extends React.Component {
   };
 
   positivePercentage = () => {
-    const { good, neutral, bad } = this.state;
+    const { good } = this.state;
     return ((good / this.totalOption()) * 100).toFixed(0);
   };
 
