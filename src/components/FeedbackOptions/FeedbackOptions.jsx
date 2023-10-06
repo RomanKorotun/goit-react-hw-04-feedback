@@ -1,14 +1,10 @@
 import { Button, ButtonsContainer } from './FeedbackOptions.styled';
 
-export const FeedbackOptions = ({ stateObj, onLeaveFeedback }) => {
-  const keys = Object.keys(stateObj);
+export const FeedbackOptions = ({ keys, onLeaveFeedback }) => {
   return (
     <ButtonsContainer>
-      {keys.map((item, idx) => (
-        <Button
-          key={item[idx]}
-          onClick={evt => onLeaveFeedback(evt.target.textContent)}
-        >
+      {keys.map(item => (
+        <Button key={item} onClick={() => onLeaveFeedback(item)}>
           {item}
         </Button>
       ))}

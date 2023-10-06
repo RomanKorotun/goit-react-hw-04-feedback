@@ -30,21 +30,23 @@ export class App extends React.Component {
   };
 
   render() {
+    const total = this.totalOption();
+    const positivePercentage = this.positivePercentage();
     return (
       <React.Fragment>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            stateObj={this.state}
+            keys={Object.keys(this.state)}
             onLeaveFeedback={this.leaveFeedback}
           />
         </Section>
 
         <Section title="Statistics">
-          {this.totalOption() ? (
+          {total > 0 ? (
             <Statistics
               stateObj={this.state}
-              onTotalOption={this.totalOption}
-              onPositivePercentage={this.positivePercentage}
+              onTotalOption={total}
+              onPositivePercentage={positivePercentage}
             />
           ) : (
             <Notification message="There is no feedback" />

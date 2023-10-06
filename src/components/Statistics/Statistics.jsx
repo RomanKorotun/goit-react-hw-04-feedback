@@ -1,17 +1,17 @@
 import React from 'react';
 import { Item } from './Statistics.styled';
 export const Statistics = ({
-  stateObj,
+  stateObj: { good, neutral, bad },
   onTotalOption,
   onPositivePercentage,
 }) => {
   return (
     <ul>
-      <Item>Good: {stateObj.good}</Item>
-      <Item>Neutral: {stateObj.neutral}</Item>
-      <Item>Bad: {stateObj.bad}</Item>
-      <Item>Total: {onTotalOption()}</Item>
-      <Item>Positive feedback: {onPositivePercentage()}%</Item>
+      <Item>Good: {good}</Item>
+      <Item>Neutral: {neutral}</Item>
+      <Item>Bad: {bad}</Item>
+      <Item>Total: {onTotalOption}</Item>
+      <Item>Positive feedback: {onPositivePercentage}%</Item>
     </ul>
   );
 };
