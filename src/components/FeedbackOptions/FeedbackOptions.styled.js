@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ButtonsContainer = styled.div`
   display: flex;
   gap: 6px;
-  margin-bottom: 20px;
 `;
 
 export const Button = styled.button`

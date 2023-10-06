@@ -1,31 +1,17 @@
-import { Notification } from 'components/Notification/Notification';
 import React from 'react';
-import { Item, Title } from './Statistics.styled';
+import { Item } from './Statistics.styled';
 export const Statistics = ({
-  good,
-  neutral,
-  bad,
-  total,
-  positivePercentage,
+  stateObj,
+  onTotalOption,
+  onPositivePercentage,
 }) => {
-  if (good || neutral || bad) {
-    return (
-      <div>
-        <Title>Statistics</Title>
-        <ul>
-          <Item>Good: {good}</Item>
-          <Item>Neutral: {neutral}</Item>
-          <Item>Bad: {bad}</Item>
-          <Item>Total: {total()}</Item>
-          <Item>Positive feedback: {positivePercentage()}%</Item>
-        </ul>
-      </div>
-    );
-  }
   return (
-    <div>
-      <Title>Statistics</Title>
-      <Notification message="There is no feedback"></Notification>
-    </div>
+    <ul>
+      <Item>Good: {stateObj.good}</Item>
+      <Item>Neutral: {stateObj.neutral}</Item>
+      <Item>Bad: {stateObj.bad}</Item>
+      <Item>Total: {onTotalOption()}</Item>
+      <Item>Positive feedback: {onPositivePercentage()}%</Item>
+    </ul>
   );
 };

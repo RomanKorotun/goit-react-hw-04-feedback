@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
-export const SectionFeedback = styled.section`
+export const SectionCard = styled.section`
   background-color: darkgray;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px;
-  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 `;
 
 export const Title = styled.h1`

@@ -1,5 +1,8 @@
 import React from 'react';
 import { Section } from './Section/Section';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import { Statistics } from './Statistics/Statistics';
+import { Notification } from './Notification/Notification';
 
 export class App extends React.Component {
   state = {
@@ -28,13 +31,26 @@ export class App extends React.Component {
 
   render() {
     return (
-      <Section
-        title="Please leave feedback"
-        stateObj={this.state}
-        onLeaveFeedback={this.leaveFeedback}
-        onTotalOption={this.totalOption}
-        onPositivePercentage={this.positivePercentage}
-      />
+      <React.Fragment>
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            stateObj={this.state}
+            onLeaveFeedback={this.leaveFeedback}
+          />
+        </Section>
+
+        <Section title="Statistics">
+          {this.totalOption() ? (
+            <Statistics
+              stateObj={this.state}
+              onTotalOption={this.totalOption}
+              onPositivePercentage={this.positivePercentage}
+            />
+          ) : (
+            <Notification message="There is no feedback" />
+          )}
+        </Section>
+      </React.Fragment>
     );
   }
 }
