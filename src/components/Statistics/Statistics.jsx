@@ -25,7 +25,7 @@ export const Statistics = ({
   return (
     <div>
       <Title>Statistics</Title>
-      <Notification message="There is no feedback"></Notification>
+      <Notification message="There is no feedback!"></Notification>
     </div>
   );
 };
