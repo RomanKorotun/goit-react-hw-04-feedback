@@ -45,8 +45,8 @@ export class App extends React.Component {
           {total > 0 ? (
             <Statistics
               stateObj={this.state}
-              onTotalOption={total}
-              onPositivePercentage={positivePercentage}
+              totalOption={total}
+              positivePercentage={positivePercentage}
             />
           ) : (
             <Notification message="There is no feedback" />
