@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const SectionCard = styled.section`
   background-color: darkgray;
-  max-width: 400px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
 `;
