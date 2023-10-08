@@ -7,8 +7,10 @@ export const SectionCard = styled.section`
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
 `;
 
 export const Title = styled.h1`
