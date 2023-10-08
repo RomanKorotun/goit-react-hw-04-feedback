@@ -9,7 +9,7 @@ export const SectionCard = styled.section`
   padding-right: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   border-radius: 5px;
 `;
 
