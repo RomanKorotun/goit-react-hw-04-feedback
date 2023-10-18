@@ -5,6 +5,7 @@ export const Statistics = ({
   totalOption,
   positivePercentage,
 }) => {
+  console.log(good);
   return (
     <ul>
       <Item>Good: {good}</Item>

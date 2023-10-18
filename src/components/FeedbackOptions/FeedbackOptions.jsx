@@ -1,9 +1,9 @@
 import { Button, ButtonsContainer } from './FeedbackOptions.styled';
 
-export const FeedbackOptions = ({ keys, onLeaveFeedback }) => {
+export const FeedbackOptions = ({ arrBtn, onLeaveFeedback }) => {
   return (
     <ButtonsContainer>
-      {keys.map(item => (
+      {arrBtn.map(item => (
         <Button key={item} onClick={() => onLeaveFeedback(item)}>
           {item}
         </Button>
