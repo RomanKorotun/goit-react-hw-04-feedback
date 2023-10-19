@@ -1,7 +1,9 @@
 import React from 'react';
 import { Item } from './Statistics.styled';
 export const Statistics = ({
-  arrValuesBtn: [good, neutral, bad],
+  good,
+  neutral,
+  bad,
   totalOption,
   positivePercentage,
 }) => {

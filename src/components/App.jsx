@@ -22,8 +22,7 @@ export const App = () => {
     }
   };
 
-  const arrValuesBtn = [good, neutral, bad];
-  const total = arrValuesBtn.reduce((acc, item) => (acc += item), 0);
+  const total = good + neutral + bad;
   const positivePercentage = ((good / total) * 100).toFixed(0);
 
   return (
@@ -38,7 +37,9 @@ export const App = () => {
       <Section title="Statistics">
         {total > 0 ? (
           <Statistics
-            arrValuesBtn={arrValuesBtn}
+            good={good}
+            neutral={neutral}
+            bad={bad}
             totalOption={total}
             positivePercentage={positivePercentage}
           />
